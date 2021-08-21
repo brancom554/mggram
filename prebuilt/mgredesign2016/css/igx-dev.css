@@ -1,0 +1,137 @@
+/* Joe Hair 02-15-207/*
+	
+	Use this file for overrides.
+	Permanent styles can eventually be folded back into style.
+*/
+
+div.calc{background:#026FB6;color:#fff;margin:0 0 7px;padding:10px;text-align:center;}
+
+/*Page Builder Layout CSS Fix*/
+main .container .pageBuilderLayout {
+    background: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+main  .container  .pageBuilderLayout  .row {
+    background: #fff;
+    padding: 70px 40px;
+    overflow: hidden;
+    margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+main .row .value-prop {
+	background: #fff;
+	padding: 70px 40px;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.home-head-banner strong {
+    font-weight: 400;
+}
+
+.one-column h2 {
+	margin-left: 0px;
+}
+
+/*How-To Step Component - Two-item-box exclusive to Howtostepcomponent */
+.two-item-box {text-align: center;}
+.two-item-box h1.box-title {color:#da291c; font-size:46px;margin-bottom:0;}
+.featured-content span.box-title {
+	padding: 0;
+}
+.featured-content span.box-title p {
+	font-size: 38px;
+	padding: 0;
+	font-weight: 100;
+	margin: 0 0 27px;
+	line-height: 44px;
+}
+.featured-content span.box-title p strong {
+	font-weight:400;
+}
+
+.two-item-box img {margin:20px;}
+.pageBuilderLayout div span.center-text{
+	text-align:center;
+}
+
+.featured > div:nth-of-type(2) {
+	border-left: 0px !important;
+}
+.featured div > img {
+	width:100%;
+}
+
+.site-map ul li {
+	font-size: 18px;
+	color:#666;
+}
+
+.externalLinkPopup span.popupClose{
+	position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    margin: 0;
+    border: solid 1px #666;
+	line-height: 34px;
+	cursor: pointer;
+}
+
+@media (max-width:425px) {
+	.two-item-box h1.box-title {line-height:1;}
+	.featured div > img{
+		width: inherit;
+	}
+	main > .container > .pageBuilderLayout > .row {
+		padding: 40px 20px;
+	}
+}
+@media (max-width:767px){
+	.featured-content span.box-title p {width: 100%;line-height: 1;}
+    main .row .value-prop {padding-top: 0;}
+	
+}
+@media (min-width:768px) {
+	a.language img {
+		min-width: 40px;
+	}
+	.two-item-box h1.box-title{font-size:32px;}
+	
+	div.col-sm-4.our-services {
+	width: 32.33333333%; 
+	display: inline-table;
+	float: none;
+	}
+}
+@media screen and (min-width: 992px){
+	.two-item-box h1.box-title{font-size:40px;}
+	
+	main > .container > .pageBuilderLayout > .row > div:nth-of-type(2) {
+		border-left: 1px solid #f4f4f4;
+		padding-left: 40px;
+	}
+	
+	.two-column.site-map > div:nth-of-type(2){
+		border-left: 1px solid #f4f4f4;
+		padding-left: 40px;
+	}
+
+	/*TODO: disconnect this from col-md-6 bootstrap layout*/
+	/*Featured Ads Presentation Layer Fix */
+	.pagePresentationLayoutColumn > div.col-md-6 {
+		width:100%;
+	}
+
+}
+@media screen and (min-width:1200px){
+	.featured-content span.box-title p{width: 80%;}
+}
+
+div.fw-comp > div > div.col-md-6 > ul {
+	margin: 0 0 30px 40px;
+}

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'SutonnyMJ';
+    src: url('../fonts/SutonnyMJ.eot');
+    src: url('../fonts/SutonnyMJ.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SutonnyMJ.woff2') format('woff2'),
+        url('../fonts/SutonnyMJ.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'SutonnyMJ';
+    src: url('../fonts/SutonnyMJItalic.eot');
+    src: url('../fonts/SutonnyMJItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SutonnyMJItalic.woff2') format('woff2'),
+        url('../fonts/SutonnyMJItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SutonnyMJ';
+    src: url('../fonts/SutonnyMJBold.eot');
+    src: url('../fonts/SutonnyMJBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SutonnyMJBold.woff2') format('woff2'),
+        url('../fonts/SutonnyMJBold.woff') format('woff');
+    font-weight: bold;
+}
+

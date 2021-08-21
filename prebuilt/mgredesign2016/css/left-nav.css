@@ -1,0 +1,31 @@
+/*Updated on Oct 2017 by Joe for homepage spacing and hr */
+
+
+
+
+/* left nav
+=======================================================================================================*/
+
+.with-side-bar-lp > div:first-of-type {margin-left: -40px;padding: 0;}
+ul.left-border-lp {
+    list-style: none;
+    margin-left: 10px;
+}
+.left-border-lp > li {
+    padding: 10px;
+    font-size: 18px;
+    padding-left: 30px;
+}
+.left-border-lp > li a {color: #606060;line-height: 1.375;}
+.left-border-lp > li:hover, .left-border-lp > li:focus {background: #f4f4f4;}
+.left-border-lp > li.active {background: #f4f4f4;border-left: 3px solid #ff0000;}
+
+.left-border-lp > li:hover a , .left-border-lp > li:focus a {text-decoration: none;}
+body.rtl .with-side-bar-lp > div:first-of-type {margin-left: 0;}
+body.rtl .with-side-bar-lp > div:last-of-type {border: 0;padding-left: 0;}
+body.rtl .with-side-bar-lp > div:last-of-type ul.left-border-lp li {padding-right: 30px;padding-left: 0;}
+body.rtl .left-border-lp > li.active {border-right: 3px solid #ff0000;border-left: 0;}
+
+	body.rtl .with-side-bar-lp > div:first-of-type {border-right: 1px solid #f4f4f4;padding-right: 40px;}
+.with-side-bar-lp > div:last-of-type, 
+.with-side-bar-lp.how-to .col-sm-8 > p {font-size: 16px;}
