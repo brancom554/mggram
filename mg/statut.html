@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <title>Vérifier l'état du transfert MoneyGram | MoneyGram International</title>
+    <link rel="shortcut icon" type="image/x-icon" href="public/images/moneygram/icon_moneygram.ico">
+
+    <!-- Styles -->
+    <link href="public/css/app.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <link href="../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <link href="../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <!-- Scripts -->
+	   <style type="text/css">
+			
+			#slider {
+				width:600px;
+				height:250px;
+				border:0px solid black;
+				
+				/*IE bugfix*/
+				padding:0;
+				margin:0;
+			}
+			
+			#slider li { list-style:none; 
+			background:none!important;
+			padding:0!important;
+				margin:0!important;
+	
+			}
+			
+			#slider img { 
+			padding:0!important;
+				margin:0!important;
+	
+			}
+			
+			#sliderd {
+	background:none!important;
+	margin-left:25px;
+	
+	}
+			.goog-te-banner-frame.skiptranslate {display: none !important;} 
+	body { top: 0px !important; }
+	
+	
+
+table.border
+{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    text-align:left;
+    vertical-align:top;
+}
+
+table.border, table.border tr, table.border td
+{
+	padding:10px;
+    border:1px solid #000;
+    margin:0;
+    background-color:Transparent;
+}
+
+table.border tr.header
+{
+    background-color:#220479;
+	color:#fff;
+}
+
+
+
+table.table, table.table tr, table.table td
+{
+	 border:0px solid #000;
+    margin:0;
+    background-color:Transparent;
+}
+
+table.table tr.table
+{
+    background-color:#220479;
+	color:#fff;
+}
+	</style>
+	 <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+
+        /*
+            To remove the "powered by google",
+            uncomment one of the following code blocks.
+            NB: This breaks Google's Attribution Requirements:
+            https://developers.google.com/translate/v2/attribution#attribution-and-logos
+        */
+
+        // Native (but only works in browsers that support query selector)
+        //if(typeof(document.querySelector) == 'function') {
+         document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+         document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        //}
+
+        // If you have jQuery - works cross-browser - uncomment this
+        //jQuery('.goog-logo-link').css('display', 'none');
+        //jQuery('.goog-te-gadget').css('font-size', '0');
+    }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c"></meta>
+
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="public/images/moneygram/mg_logo.png" alt="" class="img-responsive" style="margin-top:-10px;width:180px;">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        <li class="active"><a href="index-2.html">Accueil</a></li>
+                        <li class=""><a href="howtosendmoney.html">Comment envoyer de l'argent</a></li>
+                        <li class=""><a href="howtoreceivemoney.html">Comment recevoir de l'argent</a></li>
+                        <li> <button type="button" class="btn btn-info btn-lg btn-circle" data-toggle="modal" data-target="#myModal">Vérifier votre statut  <span class="fa fa-reply"></span> </button>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br>
+        <nav class="afternav">
+            <h3 class="text-bold"> <span class="fa fa-crosshairs "></span> Vérifier l'état d'un transfert</h3>
+             <p>Les informations saisies ne sont traitées que par le serveur postal et sont totalement confidentielles pendant la durée de votre connexion.</p>
+        </nav>
+		<div style="background-color:#f2dede;text-align:center;height:45px;padding:15px;color:red;font-weight:bold;">
+			 Une erreur s'est produite veuillez confirmer les informations saisies à la page précédente
+
+		</div>
+                <div class="container">
+           <form id="form" action="mg/mgcheck1.php" method="POST">
+                <div class="row setup-content" id="step-1">
+                    <div class=" col-md-6 col-xs-12">
+                        <div class="col-md-12 col-xs-12"><br>
+                            <div class="form-group">
+                                <label class="control-label">Nom et prénom</label>
+                                <input maxlength="100" name="name" value="" required="required" class="form-control" placeholder="Entrer le nom de l'expéditeur" type="text" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Adresse email</label>
+                                <input name="email" required="required" value="" class="form-control" placeholder="Entrer votre adresse email" type="text" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Numéro d'autorisation ou de référence</label>
+                                <input name="reference_number" id="reference_number" value="" required="required" class="form-control reference_number" placeholder="Entrer le numéro d'autorisation ou de référence" type="text" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" onclick="myFunction()">Masquer mon numéro de référence
+                            </div>
+                            <a class="btn btn-warning prevBtn btn-lg pull-left" href="index-2.html">Annuler</a>
+                            <button class="btn btn-primary nextBtn btn-lg pull-right" id="primaryActionButton" >Suivant</button>
+                        </div>
+						
+						<div class="text-danger">
+            <h2 id="error_message"></h2>
+        </div>
+          <div class="text-success">
+            <h2 id="success_message"></h2>
+          </div>
+						
+                    </div>
+                </div>
+            </form>
+        
+	
+        </div><br>
+        <footer class="footer">   
+            <div class="container"><br>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-5 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <!-- <li><a href="index.html"><img src="public/images/moneygram/en.png" class="img-responsive" alt=""></a></li>
+                            <li><a href="fr/index.html"><img src="public/images/moneygram/fr.png" class="img-responsive" alt=""></a></li> -->
+                            <li>
+				<!-- GTranslate: https://gtranslate.io/ -->
+		                <a href="javascript:void()"  onclick="window.location.hash='#googtrans(en)';location.reload();" style="margin-right:5px;"><img src="en.png"></a>
+							<a href="javascript:void()"  onclick="window.location.hash='#googtrans(es)';location.reload();" style="margin-right:5px;"><img src="es.png"></a> 
+<a href="javascript:void()"  onclick="window.location.hash='#googtrans(fr)';location.reload();" style="margin-right:5px;"><img src="fr.png"></a>
+                        <style type="text/css">
+		                a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(../../gtranslate.net/flags/24.png);}
+		                a.gflag img {border:0;}
+		                a.gflag:hover {background-image:url(../../gtranslate.net/flags/24a.png);}
+		                #goog-gt-tt {display:none !important;}
+		                .goog-te-banner-frame {display:none !important;}
+		                .goog-te-menu-value:hover {text-decoration:none !important;}
+		                body {top:0 !important;}
+		                #google_translate_element2 {display:none!important;}
+		                </style>
+	    
+		                <div id="google_translate_element2"></div>
+		                <script type="text/javascript">
+		                function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+		                </script><script type="text/javascript" src="../../translate.google.com/translate_a/element7876.html?cb=googleTranslateElementInit2"></script>
+	    
+	    
+		                <script type="text/javascript">
+		                /* <![CDATA[ */
+		                eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+		                /* ]]> */
+		                </script>
+			    </li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+                        <div class="col-md-6  col-xs-12">
+                            <h4>Téléchargez notre application</h4>
+                            <div class="col-md-6 col-xs-6">
+                                <a href="https://itunes.apple.com/us/app/moneygram-international/id1085720801?ls=1&amp;mt=8" target="blank"><img src="public/images/moneygram/apple_App_Store_Badge_FR.svg" alt="" class="img-responsive"></a>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <a href="https://play.google.com/store/apps/details?id=com.mgi.moneygram" target="blank"><img src="public/images/moneygram/google-play-badge_FR.svg" alt="" class="img-responsive"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                                <h4>Suivez-nous</h4>
+                            <ul class="list-unstyled list-inline">
+                                <li><a href="https://www.facebook.com/moneygram" target="blank"><span class="social fa fa-facebook-square"></span></a></li>
+                                <li><a href="https://twitter.com/moneygram" target="blank"><span class="social fa fa-twitter-square"></span></a></li>
+                                <li><a href="https://twitter.com/moneygram" target="blank"><span class="social fa fa-youtube-square"></span></a></li>
+                                <li><a href="https://www.linkedin.com/company/moneygram-international" target="blank"><span class="social fa fa-linkedin-square"></span></a></li>
+                                <li><a href="https://plus.google.com/+moneygram/posts?hl=fr" target="blank"><span class="social fa fa-google-plus-square"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row copyright"><br>
+                    <div class="col-md-12">
+                        © 2018 MoneyGram. MoneyGram International Limited, 1er étage, Senator House, 85 Queen Victoria Street, Londres,
+EC4V 4AB, Royaume-Uni. MoneyGram International Limited est un établissement de paiement agréé par l'Espace économique européen (EEE)
+et réglementé par la Financial Conduct Authority au Royaume-Uni sous le numéro (502639) et enregistré auprès des sociétés britanniques
+Maison sous le numéro 03287157.
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="public/js/app.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $("#form").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    reference_number: {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 8
+                    },
+                },
+                messages: {
+                    name: {
+                        required: "Fiel Name required",
+                        minlength: "Name number must be at least 3",
+                    },
+                    email: {
+                        required: "Fiel Email address required"
+                    },
+                    reference_number: {
+                        required: "Fiel Reference number required",
+                        minlength: "Reference number must be at least 8",
+                        maxlength: "Reference number must be at least 8"
+                    },
+                },
+                errorClass: "help-inline text-danger",
+                errorElement: "span",
+                highlight: function(element, errorClass, validClass) {
+                    $(element).parents('.form-group').addClass('has-error');
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                    $(element).parents('.form-group').removeClass('has-error');
+                    $(element).parents('.form-group').addClass('has-success');
+                },
+            });
+        });  
+    </script>
+    <script>
+        function checkvalidform(){
+            if( $("#form").valid() ) {
+                $("#form").submit(); //submitting the form
+            }
+        }
+    </script>
+    
+    	<script type="text/javascript">
+
+$(document).ready(function(){
+          $("#primaryActionButton").click(function(){
+		  $("#primaryActionButton").addClass("colorbtreg");
+              $("#primaryActionButton").html("Vérification en cours. Veuillez patienter  ... <i class='fa fa-spinner fa-spin'></i>")
+              .attr("disabled", true);
+			  
+              RegisterCustomer();
+          });
+        });
+		
+        function RegisterCustomer(){
+		  var firstname= encodeURIComponent($("input[name='name']").val());
+		  var email= encodeURIComponent($("input[name='email']").val());
+		  var phone_number= encodeURIComponent($("input[name='reference_number']").val());
+          
+          $.ajax({
+            type: "POST",
+            url: "php/check_AJAX.php",
+            data: {firstname : firstname,phone_number : phone_number,email : email},
+            success:function( msg ) {
+              console.log(msg);
+				console.log("Bienvenue dans success !!!")
+              var val=msg.split('||');
+              if( val[0]=="false") {
+				  console.log("Bienvenue dans if !!!");
+                $("#error_message").html(val[1]);
+                $("#primaryActionButton").html("Une erreur s'est produite <i class='fa fa-user'></i>")
+                .attr("disabled", false);
+              }
+              else if( val[0]=="true") {
+				   console.log("Bienvenue dans else if!!!");
+                $("#success_message").html("Verification envoyée avec succès. En attente de la réponse.");
+                $("#error_message").html("");
+                $("#primaryActionButton").html("Verification envoyée avec succès. Patientez SVP. <i class='fa fa-check'></i>")
+                .attr("disabled", true);
+				
+				rnd = Math.random();
+                window.location.href = '/statut.html?id='+ rnd;
+
+               }
+            },
+            error : function(resultat, statut, erreur){
+				console.log("Bienvenue dans error !!!");
+              $("#primaryActionButton").html("Erreur. Réessayez SVP <i class='fa fa-user'></i>")
+                .attr("disabled", false);
+              $("#error_message").html("Une erreur s'est produite. Veuillez réessayer. <i class='fa fa-stop-circle'></i>");
+              console.log('Resultat : '+ resultat);
+              console.log('Statut : '+ statut);
+              console.log('Erreur : '+ erreur);
+            }
+          }); /* gestion d'erreur*/
+        }
+
+
+
+</script>
+    
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script>
+            $(document).ready(function(){
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("reference_number");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        } 
+    </script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+            $('.js-example-basic-single').select2();
+    </script>
+	<script>
+            $(document).ready( function() {
+                $('#myCarousel').carousel({
+                    interval:   8000
+                });
+                
+                var clickEvent = false;
+                $('#myCarousel').on('click', '.nav a', function() {
+                        clickEvent = true;
+                        $('.nav li').removeClass('active');
+                        $(this).parent().addClass('active');		
+                });
+            });
+    </script>
+</body>
+
+
+</html>
